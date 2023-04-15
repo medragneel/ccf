@@ -1,13 +1,139 @@
-.bg-primary {
-  background-color: hsl(211deg, 90%, 50%);
-  color: hsl(0deg, 0%, 93%);
+.p-2 {
+  padding: 2rem;
 }
-.container {
-  padding-inline: 2em;
-  margin-inline: auto;
-  max-width: 80rem;
+.pb-3 {
+  padding-bottom: 4rem;
+}
+.mt-3 {
+  margin-top: 3rem;
+}
+.mt-1 {
+  margin-top: 0.75rem;
+}
+.btn-dark {
+  background-color: hsl(0deg, 5%, 10%);
+}
+.m-2 {
+  margin: 1.5rem;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  min-height: 80px;
+}
+.nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+.ds-f {
+  display: flex;
+}
+.p-4 {
+  padding: 6rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-gap: 2rem;
+  text-align: center;
+}
+.grid {
+  margin-top: 2rem;
+}
+.btn {
+  color: hsl(0deg, 0%, 93%);
+  background-color: hsl(211deg, 90%, 50%);
+  border-radius: 8px;
+  border: none;
+  padding: 1rem;
+  outline: none;
+  cursor: pointer;
 }
 .bg-dark {
   background-color: hsl(0deg, 5%, 10%);
+  color: hsl(0deg, 0%, 93%);
+}
+.align-center {
+  text-align: center;
+}
+.al-center {
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-family: "Bord Demo", sans-serif;
+}
+.logo {
+    margin: 0;
+    line-height: 3;
+    padding: 0.25em;
+  }
+.m-1 {
+  margin: 0.75rem;
+}
+.fs-lg {
+  font-size: 1.5rem;
+}
+.mt-2 {
+  margin-top: 1.5rem;
+}
+.nav-links {
+    display: none;
+    width: 100%;
+    min-height: calc(100vh - 56px);
+  }
+.hamburger {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  display: none;
+}
+.hamburger {
+    display: flex;
+  }
+.carousel {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  overflow-x: auto;
+  scroll-snap-align: start;
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+.bar {
+  width: 100%;
+  height: 3px;
+  border-radius: 8px;
+}
+.p-3 {
+  padding: 4rem;
+}
+.m-3 {
+  margin: 3rem;
+}
+.j-s-between {
+  justify-content: space-between;
+}
+.mt-4 {
+  margin-top: 4.5rem;
+}
+.card {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.fs-xxl {
+  font-size: 3rem;
+}
+.txt-light {
   color: hsl(0deg, 0%, 93%);
 }

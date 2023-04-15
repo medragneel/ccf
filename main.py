@@ -13,9 +13,15 @@ def match_lines(lines,pattern):
 
 
 def get_class(matches):
+    pattern = r'"(.*?)"'
     for _,v in enumerate(matches):
-        cls = v.split('"')[1]
-        yield cls
+        split_result = re.split(pattern,v)
+        try:
+            cls = split_result[1].split(" ")
+            for classname in cls:
+                yield classname
+        except IndexError:
+            print("Error: Failed to split string: {}".format(v))
 
 def extract_class_rules(css_file, specific_classes):
     with open(css_file, 'r') as file:
@@ -28,8 +34,7 @@ def extract_class_rules(css_file, specific_classes):
             yield class_rule
 
 
-html = lines("./index.html")
-css = lines("./style.css")
+html = lines("./merged.html")
 
 
 html_matches = match_lines(html,"class")
@@ -37,7 +42,7 @@ html_matches = match_lines(html,"class")
 
 
 
-mm = set(list(get_class(html_matches)))
+mm = set(get_class(html_matches))
 
 
 for class_rule in extract_class_rules("./style.css", mm):
