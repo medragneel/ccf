@@ -34,7 +34,7 @@ def extract_class_rules(css_file, specific_classes):
             yield class_rule
 
 
-html = lines("./merged.html")
+html = lines("./index.html")
 
 
 html_matches = match_lines(html,"class")
@@ -46,4 +46,5 @@ mm = set(get_class(html_matches))
 
 
 for class_rule in extract_class_rules("./style.css", mm):
-    print(class_rule)
+    with open("result.css","a") as f:
+        f.write(class_rule)
